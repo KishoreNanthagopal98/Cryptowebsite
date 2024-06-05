@@ -1,0 +1,13 @@
+.navList{
+    list-style: none;
+}
+
+.navbarMainDiv{
+    display: flex;
+    gap: 25%;
+    margin: auto 20%;
+}
+
+.navBar{
+    max-width: calc(100% - 200px);
+}
