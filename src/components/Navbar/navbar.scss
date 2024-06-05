@@ -1,13 +1,40 @@
-.navList{
-    list-style: none;
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+  
+    a {
+    //   color: whitesmoke;
+    }
+  }
+
+.navBar{
+    position: absolute;
+    max-width: calc(100% - 200px);
 }
 
 .navbarMainDiv{
     display: flex;
-    gap: 25%;
-    margin: auto 20%;
+    justify-content: space-between;
+    max-width: 120rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    // padding: 3rem 2rem;
+    align-items: center;
+    color: #f3f2f4;
+
+    a {
+        text-decoration: none;
+    }
 }
 
-.navBar{
-    max-width: calc(100% - 200px);
+.navList{
+    list-style: none;
+    display: flex;
+    gap:25%;
+    align-items: center;
+    width: 200rem
 }
+
