@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { SocialIcon } from 'react-social-icons'
 import "./navbar.scss";
 
 function Navbar() {
 	return (
 		<>
-			<nav className="navBar">
+			<nav className="navBar container">
 				<div className="navbarMainDiv">
 					<Link to="/">
 						<p>Crypto</p>
@@ -20,6 +21,9 @@ function Navbar() {
 							<a href="#joinus">Join Us</a>
 						</li>
 					</ul>
+					<div>
+						<SocialIcon network="github" url="https://githuv.com/"/>
+					</div>
 				</div>
 			</nav>
 		</>
