@@ -1,9 +1,8 @@
-import Navbar from "../../components/Navbar/navbar";
-
+import CloudBackground from "../../components/CloudBackground/CloudBackground";
 function Home () {
     return (
         <>
-            <Navbar />
+            <CloudBackground />
         </>
     );
 }
