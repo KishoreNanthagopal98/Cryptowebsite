@@ -1,10 +1,13 @@
 import CloudBackground from "../../components/CloudBackground/CloudBackground";
-function Home () {
-    return (
-        <>
-            <CloudBackground />
-        </>
-    );
+import Navbar from "../../components/Navbar/Navbar";
+
+function Home() {
+  return (
+    <>
+      <CloudBackground />
+      <Navbar />
+    </>
+  );
 }
 
 export default Home;

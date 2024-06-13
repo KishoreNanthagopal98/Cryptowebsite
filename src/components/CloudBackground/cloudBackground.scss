@@ -12,8 +12,7 @@
 }
 
 .agnightsky_sky {
-  height: 87%;
-
+  height: 100%;
   z-index: -5;
 }
 .agnightsky_clouds,
@@ -60,10 +59,8 @@
 .agnightsky_moon {
   height: 14.4em;
   width: 14.4em;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/moon.png)
-    no-repeat scroll 0 0;
+  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/moon.png) no-repeat scroll 0 0;
   background-size: 100% 100%;
-
   z-index: 1;
   top: 4.5em;
   right: 30%;
@@ -74,8 +71,7 @@
 }
 .agnightsky_palm {
   height: 60em;
-  width: 29em;
-
+  width: 33em;
   z-index: 3;
   top: 0;
 }
@@ -167,6 +163,11 @@
 
   .agnightsky_palm2 {
     display: none;
+  }
+
+  .agnightsky_palm1{
+    left: -12%;
+    top: -25%;
   }
 }
 
