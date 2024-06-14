@@ -1,29 +1,31 @@
+import React, { useEffect } from 'react';
 import "./navbar.scss";
 
 function Navbar() {
-  let list = document.querySelectorAll(".list");
-  for (let i = 0; i < list.length; i++) {
-    list[i].onclick = (e) => {
-      let j = 0;
-      while (j < list.length) {
-        list[j++].className = "list";
-      }
-      list[i].className = "list active";
-    };
-  } 
-  
-  list.forEach((elements) => {
-    elements.addEventListener("click", function (event) {
-      console.log("reached");
-      let bg = document.querySelector("body");
-      let color = event.target.getAttribute("data-color");
-      console.log(event.target)
-      bg.style.backgroundColor = color;
+  useEffect(() => {
+    let list = document.querySelectorAll(".list");
+
+    list.forEach((element, index) => {
+      element.addEventListener("click", function(event) {
+        list.forEach(item => item.className = "list");
+        element.className = "list active";
+        
+        let bg = document.querySelector("body");
+        let color = event.currentTarget.getAttribute("data-color");
+        bg.style.backgroundColor = color;
+      });
     });
-  });
+
+    // Clean up event listeners on component unmount
+    return () => {
+      list.forEach(element => {
+        element.replaceWith(element.cloneNode(true));
+      });
+    };
+  }, []);
   return ( 
-    <>
-      {/* <div className="navbarPar"> */}
+    <> 
+      <div className="navbarPar"> 
         <div className="navigation">
           <ul>
             <li className="list active" data-color="#dc143c">
@@ -69,7 +71,7 @@ function Navbar() {
             <div className="indicator"></div>
           </ul>
         </div>
-      {/* </div> */}
+      </div> 
     </>
   );
 }
