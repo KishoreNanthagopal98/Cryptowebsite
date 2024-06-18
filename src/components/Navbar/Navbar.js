@@ -39,17 +39,17 @@ function Navbar() {
             <li className="list" data-color="#3c40c6">
               <a href="#">
                 <span className="icon">
-                  <i className="far fa-info"></i>
+                  <i className="far fa-gamepad"></i>
                 </span>
-                <span className="title">About</span>
+                <span className="title">Games</span>
               </a>
             </li>
             <li className="list" data-color="#05c46b">
               <a href="#">
                 <span className="icon">
-                  <i className="far fa-comment"></i>
+                  <i className="far fa-info"></i>
                 </span>
-                <span className="title">Messages</span>
+                <span className="title">About</span>
               </a>
             </li>
             <li className="list" data-color="#0fbcf9">
@@ -63,9 +63,9 @@ function Navbar() {
             <li className="list" data-color="#ffa801">
               <a href="#">
                 <span className="icon">
-                  <i className="far fa-cog"></i>
+                  <i className="far fa-user"></i>
                 </span>
-                <span className="title">Settings</span>
+                <span className="title">Profile</span>
               </a>
             </li>
             <div className="indicator"></div>
