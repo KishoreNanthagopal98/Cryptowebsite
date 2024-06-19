@@ -33,7 +33,7 @@ function Navbar() {
                 <span className="icon">
                   <i className="far fa-home"></i>
                 </span>
-                <span className="title">Home</span>
+                <span className="titleNav">Home</span>
               </a>
             </li>
             <li className="list" data-color="#3c40c6">
@@ -41,7 +41,7 @@ function Navbar() {
                 <span className="icon">
                   <i className="far fa-gamepad"></i>
                 </span>
-                <span className="title">Games</span>
+                <span className="titleNav">Games</span>
               </a>
             </li>
             <li className="list" data-color="#05c46b">
@@ -49,7 +49,7 @@ function Navbar() {
                 <span className="icon">
                   <i className="far fa-info"></i>
                 </span>
-                <span className="title">About</span>
+                <span className="titleNav">About</span>
               </a>
             </li>
             <li className="list" data-color="#0fbcf9">
@@ -57,7 +57,7 @@ function Navbar() {
                 <span className="icon">
                   <i className="far fa-question-circle"></i>
                 </span>
-                <span className="title">Help</span>
+                <span className="titleNav">Help</span>
               </a>
             </li>
             <li className="list" data-color="#ffa801">
@@ -65,7 +65,7 @@ function Navbar() {
                 <span className="icon">
                   <i className="far fa-user"></i>
                 </span>
-                <span className="title">Profile</span>
+                <span className="titleNav">Profile</span>
               </a>
             </li>
             <div className="indicator"></div>
