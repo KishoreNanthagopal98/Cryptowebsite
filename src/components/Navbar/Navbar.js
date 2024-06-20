@@ -29,7 +29,7 @@ function Navbar() {
         <div className="navigation">
           <ul>
             <li className="list active" data-color="#dc143c">
-              <a href="#">
+              <a href="#titleSection">
                 <span className="icon">
                   <i className="far fa-home"></i>
                 </span>
