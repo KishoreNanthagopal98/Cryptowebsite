@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.scoreSection {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+    z-index: 99;
+    font-family: 'Bangers', cursive;
+}
+
+.score {
+    z-index: 9;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.hits {
+    z-index: inherit;
+    margin-left: 32px;
+    padding: 8px 24px;
+    background: white;
+    border-radius: 8px;
+    color: black;
+    font-family: 'Bangers', cursive;
+}
+
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    z-index: 999;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.mole-box {
+    z-index: inherit;
+    position: relative;
+    overflow: hidden;
+    height: 96px;
+    width: 94px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    display: block;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.mole {
+    height: 80px;
+    background: url("../../../assets/mole.svg") top center no-repeat;
+    transform: translateY(80px);
+}
+
+.mole.out {
+    height: 80px;
+    z-index: 99;
+    transform: translateY(0px);
+}
+
+.hole {
+    z-index: 1;
+    height: 16px;
+    background: url("../../../assets/hole.svg") bottom center no-repeat;
+}
+
+.game-board {
+    display: grid;
+    gap: 78px 98px;
+    grid-template-columns: repeat(3, minmax(94px, 1fr));
+    cursor: url("../../../assets/hammer.svg"), auto;
+    padding: 2.5% 50%;
+}
+
+.btn {
+    font-family: "Bangers", system-ui;
+    border: none;
+    padding: 8px 18px;
+    font-size: 32px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    border: 2px solid #000;
+}
+
+.controls {
+    margin-top: 50px;
+    display: flex;
+    gap: 32px;
+    z-index: 9;
+}
+
+.difficulty {
+    display: flex;
+    gap: 16px;
+}
+
+.difficulty .btn {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.difficulty .btn-active {
+    transform: scale(1.2);
+    border: 2px solid #000;
+}
+
+.btn:disabled {
+    background: #dbdbdb;
+    cursor: not-allowed;
+    color: #868e96;
+    border-color: #dbdbdb;
+}
