@@ -18,17 +18,20 @@ const NostalgiaText = () => {
 
   return (
     <div className="nostalgia-container">
-			<div className="icon-container">
+			<div className="icon-container container ">
         <i className="fas fa-gamepad"></i>
 				<i className="fas fa-trophy"></i>
         <i className="fas fa-headset"></i>
       </div>
-      <animated.div style={fadeIn} className="nostalgia-heading">
-			<i className="headingIcon fas fa-headset"></i>  Reignite your inner child  <i className="headingIcon fas fa-gamepad "></i>
-      </animated.div>
-      <animated.div style={slideIn} className="nostalgia-subheading">
-        With the ultimate collection of 90s games.<br /> Experience the joy and excitement of classic gaming all over again!
-      </animated.div>
+			<div className="container">
+				<animated.div style={fadeIn} className="nostalgia-heading">
+				<i className="headingIcon fas fa-headset"></i>  Reignite your inner child  <i className="headingIcon fas fa-gamepad "></i>
+				</animated.div>
+				<animated.div style={slideIn} className="nostalgia-subheading">
+					With the ultimate collection of 90s games.<br /> Experience the joy and excitement of classic gaming all over again!
+				</animated.div>
+			</div>
+
 
     </div>
   );
