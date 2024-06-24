@@ -8,8 +8,10 @@ function Home() {
     <>
       <CloudBackground />
       <Navbar />
-      <TitleSection />
-      <DescSection />
+      <div className="titleDescSection">
+        <TitleSection />
+        <DescSection />
+      </div>
     </>
   );
 }
