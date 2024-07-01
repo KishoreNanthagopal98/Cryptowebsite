@@ -1,0 +1,41 @@
+.gameover-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(5px);
+    z-index: 0;
+}
+
+.closebtn {
+    font-family: "Bangers", system-ui;
+    border: none;
+    padding: 5px 10px;
+    font-size: 32px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    border: 2px solid #000;
+}

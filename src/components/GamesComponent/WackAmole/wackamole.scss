@@ -106,11 +106,20 @@
     border: 2px solid #000;
 }
 
+.wackMoleMainDiv{
+    width: 100%;
+}
+
 .controls {
-    margin-top: 50px;
+    margin: 50%;
+    /* margin-top: 50px; */
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 32px;
     z-index: 9;
+    width: 370px;
+    align-items: center;
 }
 
 .difficulty {
@@ -134,4 +143,54 @@
     cursor: not-allowed;
     color: #868e96;
     border-color: #dbdbdb;
+}
+
+.gameover {
+    z-index: 999;
+    position: relative;
+}
+
+.gameon {
+    display: none;
+}
+
+@media (max-width:1024px) {
+    .title{
+        font-weight: 300;
+        font-size: 55px
+    }
+}
+
+@media (max-width:760px) {
+    .title{
+        font-weight: 200;
+        font-size: 48px
+    }
+}
+
+@media (max-width:600px) {
+    .title{
+        font-weight: 200;
+        font-size: 40px
+    }
+}
+
+@media (max-width:535px) {
+    .title{
+        font-weight: 200;
+        font-size: 40px
+    }
+
+    .game-board {
+        display: grid;
+        gap: 70px 90px;
+        grid-template-columns: repeat(2, minmax(94px, 1fr));
+        cursor: url(http://localhost:3000/static/media/hammer.94162fe….svg), auto;
+        padding: 2.5% 50%;
+    }
+    .controls {
+        margin-top: 10px;
+        margin-left: -45%;
+        gap: 15px;
+    }
 }
