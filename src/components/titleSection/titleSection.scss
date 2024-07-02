@@ -22,25 +22,25 @@
 /* Media queries for responsive design */
 @media (max-width: 1200px) {
   .title {
-    font-size: 3.5em;
+    font-size: 3.5em !important;
   }
 }
 
 @media (max-width: 992px) {
   .title {
-    font-size: 3em;
+    font-size: 3em !important;
   }
 }
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.3em;
+    font-size: 2.3em !important;
   }
 }
 
 @media (max-width: 576px) {
   .title {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .title-section {
     height: 15vh;
@@ -49,7 +49,7 @@
 
 @media (max-width: 420px) {
   .title {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   .title-section {
     height: 15vh;

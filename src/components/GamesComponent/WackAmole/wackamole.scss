@@ -106,13 +106,8 @@
     border: 2px solid #000;
 }
 
-.wackMoleMainDiv{
-    width: 100%;
-}
-
 .controls {
     margin: 50%;
-    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,32 +149,7 @@
     display: none;
 }
 
-@media (max-width:1024px) {
-    .title{
-        font-weight: 300;
-        font-size: 55px
-    }
-}
-
-@media (max-width:760px) {
-    .title{
-        font-weight: 200;
-        font-size: 48px
-    }
-}
-
-@media (max-width:600px) {
-    .title{
-        font-weight: 200;
-        font-size: 40px
-    }
-}
-
 @media (max-width:535px) {
-    .title{
-        font-weight: 200;
-        font-size: 40px
-    }
 
     .game-board {
         display: grid;
@@ -192,5 +162,9 @@
         margin-top: 10px;
         margin-left: -45%;
         gap: 15px;
+    }
+
+    .btn {
+        padding: 8px 13px;
     }
 }

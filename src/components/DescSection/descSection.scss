@@ -15,12 +15,18 @@
 .nostalgia-heading {
     font-size: 2em;
     font-weight: bold;
-    color: greenyellow;
+    background: linear-gradient(white, red);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
 .nostalgia-subheading {
     font-size: 1.5em;
-    color: greenyellow;
+    background: linear-gradient(red, white);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
 .icon-container {
