@@ -114,7 +114,25 @@ const Wackamole = () => {
               <span className="icon hole"></span>
             </div>
           ))}
-          <div className="controls">
+          {/* <div className="controls"> */}
+            {/* <div className="difficulty">
+              {Object.keys(difficultyLevels).map((level) => (
+                <button
+                  className={`btn btn-difficulty ${level === "normal" ? "btn-active" : ""
+                    }`}
+                  key={level}
+                  onClick={() => handleDifficulty(level)}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
+            <button className="btn btn-play" onClick={start}>
+              Play
+            </button>
+          </div> */}
+        </main>
+        <div className="controls">
             <div className="difficulty">
               {Object.keys(difficultyLevels).map((level) => (
                 <button
@@ -131,7 +149,6 @@ const Wackamole = () => {
               Play
             </button>
           </div>
-        </main>
       </div>
       <div className={finished == 1 ? 'gameover' : 'gameon'}>
         <ScoreSection score={100} handleModal = {modalHandle} />

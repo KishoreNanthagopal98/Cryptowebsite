@@ -107,13 +107,12 @@
 }
 
 .controls {
-    margin: 50%;
+    z-index:999;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    z-index: 9;
-    width: 370px;
     align-items: center;
 }
 
@@ -159,12 +158,21 @@
         padding: 2.5% 50%;
     }
     .controls {
-        margin-top: 10px;
-        margin-left: -45%;
+        margin-top: 20px;
         gap: 15px;
     }
 
     .btn {
-        padding: 8px 13px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .controls {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .gameDiv{
+        max-width: 100vw;
     }
 }
