@@ -16,6 +16,7 @@ const Wackamole = () => {
   const [finished, setFinished] = useState(0);
   const lastMoleClicked = useRef(null);
   const moles = useRef(Array(6).fill(null));
+  const [activeDifficulty, setActiveDifficulty] = useState("normal");
 
   useEffect(() => {
     return () => {
@@ -24,25 +25,21 @@ const Wackamole = () => {
   }, [gameInterval]);
 
   const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
-
   const toggleMole = (mole, milliseconds) => {
     mole.classList.add("out");
     setTimeout(() => {
       mole.classList.remove("out");
     }, milliseconds);
   };
-
   const getRandomIndex = (lastIndex, limit = 6) => {
     const index = Math.floor(Math.random() * limit);
     return lastIndex === index ? getRandomIndex(lastIndex) : index;
   };
-
   const toggleButtons = (option = false) => {
     document.querySelectorAll(".btn").forEach((button) => {
       button.disabled = option;
     });
   };
-
   const start = () => {
     toggleButtons(true);
     clearInterval(gameInterval);
@@ -60,36 +57,27 @@ const Wackamole = () => {
       toggleMole(currentMole, getRandomNumber(min, max));
     }, milliseconds + delay);
     setGameInterval(interval);
-
-    // Update finished state after 20 seconds
     setTimeout(() => {
       setFinished(1);
       toggleButtons(false);
       document.querySelector(".btn-play").textContent = "Play";
       clearInterval(interval);
-    }, 20000); // 20000 ms = 20 seconds
+    }, 20000);
   };
-
   const handleClick = (e, mole) => {
     if (lastMoleClicked.current === mole || !e.isTrusted) return;
     setHits((prevHits) => prevHits + 1);
     mole.classList.remove("out");
     lastMoleClicked.current = mole;
   };
-
   const handleDifficulty = (difficulty) => {
     setCurrentDifficulty(difficulty);
-    document.querySelectorAll(".btn-difficulty").forEach((button) => {
-      button.classList.remove("btn-active");
-    });
-    document.querySelector(`.btn-difficulty:contains(${difficulty})`).classList.add("btn-active");
+    setActiveDifficulty(difficulty);
   };
-
   const modalHandle = () => {
     setFinished(0);
     setHits(0);
-  }
-
+  };
   return (
     <div className="gameDiv">
       <div className="title-section" id="titleSection">
@@ -114,44 +102,27 @@ const Wackamole = () => {
               <span className="icon hole"></span>
             </div>
           ))}
-          {/* <div className="controls"> */}
-            {/* <div className="difficulty">
-              {Object.keys(difficultyLevels).map((level) => (
-                <button
-                  className={`btn btn-difficulty ${level === "normal" ? "btn-active" : ""
-                    }`}
-                  key={level}
-                  onClick={() => handleDifficulty(level)}
-                >
-                  {level}
-                </button>
-              ))}
-            </div>
-            <button className="btn btn-play" onClick={start}>
-              Play
-            </button>
-          </div> */}
         </main>
         <div className="controls">
-            <div className="difficulty">
-              {Object.keys(difficultyLevels).map((level) => (
-                <button
-                  className={`btn btn-difficulty ${level === "normal" ? "btn-active" : ""
-                    }`}
-                  key={level}
-                  onClick={() => handleDifficulty(level)}
-                >
-                  {level}
-                </button>
-              ))}
-            </div>
-            <button className="btn btn-play" onClick={start}>
-              Play
-            </button>
+          <div className="difficulty">
+            {Object.keys(difficultyLevels).map((level) => (
+              <button
+                className={`btn btn-difficulty ${level === activeDifficulty ? "btn-active" : ""
+                  }`}
+                key={level}
+                onClick={() => handleDifficulty(level)}
+              >
+                {level}
+              </button>
+            ))}
           </div>
+          <button className="btn btn-play" onClick={start}>
+            Play
+          </button>
+        </div>
       </div>
-      <div className={finished == 1 ? 'gameover' : 'gameon'}>
-        <ScoreSection score={100} handleModal = {modalHandle} />
+      <div className={finished == 1 ? "gameover" : "gameover"}>
+        <ScoreSection score={hits} handleModal={modalHandle} />
       </div>
     </div>
   );

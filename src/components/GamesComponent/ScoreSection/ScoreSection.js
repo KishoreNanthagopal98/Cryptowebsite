@@ -6,7 +6,7 @@ function ScoreSection({score, handleModal}) {
 			<div class="backdrop"></div>
 			<div className="gameover-modal">
 				<h2 className="gameover-title">Game Over!!</h2>
-				<p className="gameover-score">Your Score is: {score}</p>
+				<p className="gameover-score gameover-title">Your Score is: {score}</p>
 				<br />
 				<button className="closebtn" onClick={handleModal}>
           Close
