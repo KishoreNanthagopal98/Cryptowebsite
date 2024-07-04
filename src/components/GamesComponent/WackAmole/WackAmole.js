@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./wackamole.scss";
 import "../../titleSection/titleSection.scss";
 import ScoreSection from "../ScoreSection/ScoreSection";
+import TimerSection from "../../TimerSection/TimerSection";
+import Navbar from "../../Navbar/Navbar";
 
 const difficultyLevels = {
   easy: { min: 700, max: 1000 },
@@ -17,6 +19,8 @@ const Wackamole = () => {
   const lastMoleClicked = useRef(null);
   const moles = useRef(Array(6).fill(null));
   const [activeDifficulty, setActiveDifficulty] = useState("normal");
+  const [startTimer, setStartTimer] = useState(false);
+  const [timerStarted, setTimerStarted] = useState(false);
 
   useEffect(() => {
     return () => {
@@ -44,6 +48,8 @@ const Wackamole = () => {
     toggleButtons(true);
     clearInterval(gameInterval);
     setFinished(0);
+    setStartTimer(true);
+    setTimerStarted(true);
     let lastIndex = null;
     const { min, max } = difficultyLevels[currentDifficulty];
     const milliseconds = getRandomNumber(min, max);
@@ -60,6 +66,8 @@ const Wackamole = () => {
     setTimeout(() => {
       setFinished(1);
       toggleButtons(false);
+      setStartTimer(false);
+      setTimerStarted(false);
       document.querySelector(".btn-play").textContent = "Play";
       clearInterval(interval);
     }, 20000);
@@ -86,6 +94,9 @@ const Wackamole = () => {
       <div className="scoreSection">
         <span className="score">Hits</span>
         <span className="hits">{hits}</span>
+      </div>
+      <div>
+        <TimerSection timerProp={20} timerStatus={timerStarted} />
       </div>
       <div className="wackMoleMainDiv">
         <main className="game-board gameContainer">
@@ -121,7 +132,7 @@ const Wackamole = () => {
           </button>
         </div>
       </div>
-      <div className={finished == 1 ? "gameover" : "gameover"}>
+      <div className={finished == 1 ? "gameover" : "gameon"}>
         <ScoreSection score={hits} handleModal={modalHandle} />
       </div>
     </div>
