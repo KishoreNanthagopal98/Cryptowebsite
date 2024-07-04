@@ -43,3 +43,49 @@
 .gameover-title{
     color: white;
 }
+.cracker-gif {
+    position: fixed;
+    height: 154px;
+    width: 150px;
+    top:55%;
+    left: 0px;
+}
+
+.cracker-gif-right{
+    position: fixed;
+    height: 154px;
+    width: 150px;
+    top: 0%;
+    right: 0px;
+}
+
+@media (max-width:720px){
+    .gameover-modal{
+        width: 95%
+    }
+    .cracker-gif {
+        height: 154px;
+        width: 150px;
+        top: 70%;
+        left: -7%;
+    }  
+
+    .cracker-gif-right {
+        top: -37%;
+        right:-9px
+    }
+}
+
+@media (min-width:721px) and (max-width:1024px) {
+    .gameover-modal{
+        width:65%
+    }
+    .cracker-gif-right {
+        top: -37%;
+        right:-9px
+    }
+    .cracker-gif {
+        top: 70%;
+        left: -7%;
+    }
+}
