@@ -6,7 +6,6 @@ const TimerSection = ({ timerProp, timerStatus }) => {
 
   useEffect(() => {
 	let intervalId;
-	console.log(localTimer)
 	if (timerStatus && localTimer > 0) {
 	  intervalId = setInterval(() => {
 		setLocalTimer(localTimer - 1);

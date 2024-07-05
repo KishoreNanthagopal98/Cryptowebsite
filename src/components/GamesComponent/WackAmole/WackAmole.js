@@ -3,6 +3,7 @@ import "./wackamole.scss";
 import "../../titleSection/titleSection.scss";
 import ScoreSection from "../ScoreSection/ScoreSection";
 import TimerSection from "../../TimerSection/TimerSection";
+import GameNavSec from "../../GameNavSec/GameNavSec";
 
 const difficultyLevels = {
   easy: { min: 700, max: 1000 },
@@ -20,6 +21,7 @@ const Wackamole = () => {
   const [activeDifficulty, setActiveDifficulty] = useState("normal");
   const [startTimer, setStartTimer] = useState(false);
   const [timerStarted, setTimerStarted] = useState(false);
+  const [prevScore, setPrevScore] = useState(0);
 
   useEffect(() => {
     return () => {
@@ -83,16 +85,22 @@ const Wackamole = () => {
   };
   const modalHandle = () => {
     setFinished(0);
+    setPrevScore(hits);
     setHits(0);
   };
   return (
     <div className="gameDiv">
+      <GameNavSec />
       <div className="title-section" id="titleSection">
-        <h1 className="title">Wack-A-Mole!</h1>
+        <h1 className="title">Whack-A-Mole!</h1>
       </div>
       <div className="scoreSection">
         <span className="score">Hits</span>
         <span className="hits">{hits}</span>
+      </div>
+      <div className="scoreSection">
+        <span className="score">Last Score</span>
+        <span className="hits">{prevScore}</span>
       </div>
       <div>
         <TimerSection timerProp={20} timerStatus={timerStarted} />

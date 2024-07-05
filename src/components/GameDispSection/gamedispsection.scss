@@ -1,0 +1,67 @@
+.game-dis-cont {
+    z-index:999;
+    position: absolute;
+    padding: 50px 0px;
+}
+
+.game-area {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+    box-shadow: inset -2px -2px 10px 0 rgb(255, 255, 255), 2px 3px 10px 5px rgb(255, 255, 255);
+    position: relative;
+    background-color: white;
+    text-align: center;
+    // display: flex;
+}
+
+.image-container {
+    margin: 24px 15px;
+    text-align: center;
+}
+
+.description-container {
+    font-family: "Raleway", sans-serif;
+    // font-optical-sizing: auto;
+    font-style: normal;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
+
+.game-image {
+    width: 100%;
+}
+
+.play {
+    width: 100px;
+    height:40px;
+    background-color: black;
+    margin: 15px auto;
+}
+
+.play-name {
+    color: white;
+}
+
+@media (max-width: 520px) { 
+    .game-area {
+        grid-template-columns: auto;
+    }
+}
+
+.linktag{
+    text-decoration: none;
+}

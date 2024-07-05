@@ -1,0 +1,161 @@
+.game-nav {
+    position: fixed;
+    top: 10%;
+    left: 2%;
+    z-index: 99;
+}
+
+.homeicon .fa-home:before {
+    color: beige;
+    font-size: 2em;
+}
+
+nav {
+    top: 7%;
+    width: 117px;
+    left: 100px;
+    position: fixed;
+    display: block;
+    background-color: #f6f9ff;
+    padding: 9px;
+    border-radius: 40px;
+    transform: scale(1.8);
+    overflow: hidden;
+    z-index: 99;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #53588b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+nav a b {
+    position: relative;
+    top: 40px;
+    transition: 0.3s ease top;
+}
+
+nav a i {
+    position: relative;
+    left: 25%;
+    transition: 0.3s ease left;
+}
+
+nav span {
+    position: absolute;
+    width: 100px;
+    background-color: #e5eeff;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50px;
+    z-index: 1;
+    transition: 0.3s ease left;
+}
+
+nav a:hover b {
+    top: 0;
+    padding-left: 7px;
+}
+
+nav a:hover i {
+    left: 0;
+}
+
+nav a:nth-child(1):hover~span {
+    left: 10px;
+}
+
+nav a:nth-child(2):hover~span {
+    left: 114px;
+}
+
+nav a:nth-child(3):hover~span {
+    left: 218px;
+}
+
+#ytd-url {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    margin: 20px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #53588b;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px -5px rgba(83, 88, 139, 0.3);
+    z-index: 125;
+}
+
+@media (max-width: 1024px) {
+    nav a:hover b {
+        display: none;
+    }
+    nav a {
+        width:70px;
+    }
+    nav {
+        width: 50px;
+        left:30px;
+
+    }
+    nav span {
+        width: 31px;
+    }
+
+    nav a {
+        width: 17px;
+        line-height: 0;
+    }    
+}
+
+@media (max-width: 767px) {
+    nav a:hover b {
+        display: none;
+    }
+    nav a {
+        width:50px;
+    }
+    nav {
+        width: 30px;
+        right:20px;
+        padding: 0px;
+        display: block;
+        left: auto; /* Added to override the previous left value */
+    }
+    nav span {
+        width: 22px;
+        height: 22px;
+        left: 4px;
+        top: 5px;
+    }
+
+    nav a {
+        width: 17px;
+        line-height: 0;
+    }    
+
+    .fas {
+        left: -2px;
+    }
+}
+
+@media (max-width:420px) {
+    nav {
+        top:12%;
+    }
+}
