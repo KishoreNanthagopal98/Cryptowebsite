@@ -36,11 +36,11 @@
 }
 
 .agnightsky_stars {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/stars.png)
+  background: url(../../assets/stars.png)
     repeat 0 0;
 }
 .agnightsky_twinkling {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/twinkling.png)
+  background: url(../../assets/twinkling.png)
     repeat 0 0;
   -webkit-animation: an-twinkling 200s linear infinite;
   -moz-animation: an-twinkling 200s linear infinite;
@@ -48,7 +48,7 @@
   animation: an-twinkling 200s linear infinite;
 }
 .agnightsky_clouds {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/clouds.png)
+  background: url(../../assets/clouds.png)
     repeat-x 0 0;
   background-size: cover;
   z-index: 2;
@@ -60,7 +60,7 @@
 .agnightsky_moon {
   height: 14.4em;
   width: 14.4em;
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/moon.png) no-repeat scroll 0 0;
+  background: url(../../assets/moon.png) no-repeat scroll 0 0;
   background-size: 100% 100%;
   z-index: 1;
   top: 4.5em;
@@ -77,14 +77,14 @@
   top: 0;
 }
 .agnightsky_palm1 {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/palm-1.png)
+  background: url(../../assets/palm-1.png)
     no-repeat scroll 0 0;
   background-size: cover;
 
   left: 0;
 }
 .agnightsky_palm2 {
-  background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/night-sky/images/palm-2.png)
+  background: url(../../assets/palm-2.png)
     no-repeat scroll 0 0;
   background-size: cover;
 

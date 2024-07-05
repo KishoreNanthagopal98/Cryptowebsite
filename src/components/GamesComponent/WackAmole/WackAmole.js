@@ -3,7 +3,6 @@ import "./wackamole.scss";
 import "../../titleSection/titleSection.scss";
 import ScoreSection from "../ScoreSection/ScoreSection";
 import TimerSection from "../../TimerSection/TimerSection";
-import Navbar from "../../Navbar/Navbar";
 
 const difficultyLevels = {
   easy: { min: 700, max: 1000 },
