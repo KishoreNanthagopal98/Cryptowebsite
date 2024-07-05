@@ -37,7 +37,7 @@ function Navbar() {
               </a>
             </li>
             <li className="list" data-color="#3c40c6">
-              <a href="#">
+              <a href="#gameSection">
                 <span className="icon">
                   <i className="far fa-gamepad"></i>
                 </span>
