@@ -17,7 +17,7 @@ function GameDispSection() {
               <h2>Whack a Mole</h2>
               <p>"Get ready for a blast from the past! Whack-a-Mole is back, bringing old-school arcade fun to a new generation of mole-mashing masters."</p>
             </div>
-						<Link to = "/whack-a-mole">
+						<Link to = "/whack-a-mole"  className="linktag">
 							<div className="play">
 								<h2 className="play-name">Play</h2>
 							</div>
@@ -29,7 +29,7 @@ function GameDispSection() {
             </div>
             <div className="description-container">
               <h2>Snake Classic</h2>
-              <p>"Get ready to relive the pixelated past with Snake Classic, the iconic game that slithered its way into our hearts in the 90s. Guide your snakey friend through a maze of nostalgia, one pellet at a time!"</p>
+              <p>"Get ready to relive the pixelated past with Snake Classic, the iconic game that slithered its way into our hearts in the 90s."</p>
             </div>
 						<Link to = "/" className="linktag">
 							<div className="play">
