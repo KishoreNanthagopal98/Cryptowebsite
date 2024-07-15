@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./wackamole.scss";
 import "../../titleSection/titleSection.scss";
 import ScoreSection from "../ScoreSection/ScoreSection";
-import TimerSection from "../../TimerSection/TimerSection";
 import GameNavSec from "../../GameNavSec/GameNavSec";
 
 const difficultyLevels = {
@@ -102,9 +101,9 @@ const Wackamole = () => {
         <span className="score">Last Score</span>
         <span className="hits">{prevScore}</span>
       </div>
-      <div>
+      {/* <div>
         <TimerSection timerProp={20} timerStatus={timerStarted} />
-      </div>
+      </div> */}
       <div className="wackMoleMainDiv">
         <main className="game-board gameContainer">
           {Array.from({ length: 6 }).map((_, index) => (

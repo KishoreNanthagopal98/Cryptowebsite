@@ -71,6 +71,7 @@
     height: 80px;
     background: url("../../../assets/mole.svg") top center no-repeat;
     transform: translateY(80px);
+    filter: hue-rotate(452deg) saturate(20);
 }
 
 .mole.out {

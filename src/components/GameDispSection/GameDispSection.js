@@ -31,7 +31,7 @@ function GameDispSection() {
               <h2>Snake Classic</h2>
               <p>"Get ready to relive the pixelated past with Snake Classic, the iconic game that slithered its way into our hearts in the 90s."</p>
             </div>
-						<Link to = "/" className="linktag">
+						<Link to = "/classic-snake" className="linktag">
 							<div className="play">
 								<h2 className="play-name">Play</h2>
 							</div>
