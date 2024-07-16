@@ -11,7 +11,7 @@ $grey2: #9e9a89;
     border: 1px solid #9e9a89;
     background: greenyellow;
     border-radius: 5px;
-    margin: 3% 36%;
+    margin: auto;
 }
 
 .score {
@@ -46,16 +46,13 @@ $grey2: #9e9a89;
     }
 }
 
-
 .part {
-    background: $grey;
-    width: 4px;
-    height: 4px;
+    background: darkgreen !important;
+    width: 10px;
+    height: 10px;
     border-radius: 2px;
     position: absolute;
 }
-
-
 
 @keyframes slide {
     0% {
@@ -67,10 +64,10 @@ $grey2: #9e9a89;
     }
 }
 
-
 .food {
-    width: 4px;
-    height: 4px;
+    background: red !important;
+    width: 10px;
+    height: 10px;
     border: 1px solid $grey;
     border-radius: 3px;
     position: absolute;
@@ -84,7 +81,7 @@ $grey2: #9e9a89;
     }
 
     100% {
-        width: 4px;
-        height: 4px;
+        width: 10px;
+        height: 10px;
     }
 }
