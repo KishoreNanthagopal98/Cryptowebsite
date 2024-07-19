@@ -207,7 +207,7 @@ const Menu = () => {
 
 const Score = ({ score, high_score }) => {
   return (
-    <div className="score">
+    <div className="snakescore">
       <span>
         Score: <strong>{score}</strong>
       </span>
