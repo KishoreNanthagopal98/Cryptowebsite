@@ -5,18 +5,17 @@
 }
 
 .game-area {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 50px;
     max-width: 1000px;
-    margin: 0 auto;
 }
 
 .card {
     border-radius: 30px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     box-shadow: inset -2px -2px 10px 0 rgb(255, 255, 255), 2px 3px 10px 5px rgb(255, 255, 255);
     position: relative;
@@ -58,9 +57,29 @@
     color: white;
 }
 
-@media (max-width: 520px) { 
+@media (max-width: 660px) { 
+    .game-image {
+        width: 320px;
+        height: 234px;
+    }
+    .card {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .game-image {
+        width: 220px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 940px) {
     .game-area {
         grid-template-columns: auto;
+    }
+    .card {
+        width: 70%;
     }
 }
 

@@ -1,5 +1,5 @@
 import CloudBackground from "../../components/CloudBackground/CloudBackground";
-import ClassicSnake from "../../components/GamesComponent/ClassicSnake/ClassicSnake";
+import ClassicSnake from "../../components/GamesComponent/Classicsnake/ClassicSnake";
 
 function ClassicSnakePage() {
   return (
