@@ -20,12 +20,12 @@
             background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    background-image: linear-gradient(45deg, #2600fc, #ff00ea);
+    background-image: linear-gradient(90deg, yellow, rgb(81, 255, 75));
     margin-bottom: 10px;
 }
 .nostalgia-subheading {
     font-size: 1.5em;
-    background: linear-gradient(35deg, red, white);
+    background: linear-gradient(63deg, #A9F1DF, #FFBBBB);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -75,7 +75,7 @@
         margin-bottom: 20px;
     }
     .nostalgia-subheading {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 @media (max-width: 970px) {
