@@ -1,0 +1,87 @@
+$background: #FFFFFF;
+$black: #1b1e23;
+$grey: #f4eed7;
+$grey2: #9e9a89;
+
+#snakeRootMobile {
+    z-index: 9;
+    position: relative;
+    height: 310px;
+    width: 310px;
+    border: 1px solid #9e9a89;
+    background: greenyellow;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.snakescore {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding-top: 6px;
+    display: flex;
+    color: green;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 30px;
+    width: calc(100% - 20px);
+    border-bottom: 1px solid $grey2;
+}
+
+.menu {
+    position: absolute;
+    top: calc(50% + 15px);
+    width: 100%;
+    text-align: center;
+    font-size: 0.75em;
+    color: black;
+    transform: translateY(-50%);
+
+    &.hidden {
+        display: none;
+    }
+
+    span {
+        color: red;
+    }
+}
+
+.part {
+    background: darkgreen !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    position: absolute;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.food {
+    background: red !important;
+    width: 10px;
+    height: 10px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    position: absolute;
+    transition: 0.05s;
+}
+
+@keyframes grow {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        width: 10px;
+        height: 10px;
+    }
+}

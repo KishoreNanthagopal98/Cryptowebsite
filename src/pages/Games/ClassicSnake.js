@@ -1,4 +1,4 @@
-import ClassicSnake from "../../components/GamesComponent/ClassicSnake/ClassicSnakeComp";
+import ClassicSnake from "../../components/GamesComponent/ClassicSnake/ClassicSnake";
 import CloudBackground from "../../components/CloudBackground/CloudBackground";
 
 function ClassicSnakePage() {

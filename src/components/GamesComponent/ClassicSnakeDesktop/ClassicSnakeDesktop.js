@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import GameNavSec from "../../GameNavSec/GameNavSec";
-import "../../titleSection/titleSection.scss";
-import "./classicsnake.scss";
+import "./classicsnakedesktop.scss";
 
 const startState = {
   active: false,
@@ -18,7 +16,7 @@ const startState = {
   high_score: localStorage.getItem("high_score") || 0,
 };
 
-const ClassicSnake = () => {
+const ClassicSnakeDesktop = () => {
   const [state, setState] = useState(startState);
   const [intervalId, setIntervalId] = useState(null);
   const [menuVisible, setMenuVisible] = useState(true); // State to manage menu visibility
@@ -171,10 +169,6 @@ const ClassicSnake = () => {
 
   return (
     <div className="gameDiv">
-      <GameNavSec />
-      <div className="title-section" id="titleSection">
-        <h1 className="title">Classic Snake 🐍</h1>
-      </div>
       <div id="snakeRoot">
         {menuVisible && <Menu />}
         <Score score={state.score} high_score={state.high_score} />
@@ -238,4 +232,4 @@ const Food = ({ top, left }) => {
   );
 };
 
-export default ClassicSnake;
+export default ClassicSnakeDesktop;
