@@ -76,6 +76,7 @@ const ClassicSnakeDesktop = () => {
   
   const startStopGame = useCallback((manual) => {
     setState((prevState) => {
+      console.log(prevState);
       let active = manual ? !prevState.active : true;
       if (active) {
         const interval = setInterval(updateSnake, prevState.speed);
@@ -103,9 +104,7 @@ const ClassicSnakeDesktop = () => {
       if (event.keyCode === 13 && state.active) return;
 
       if (event.keyCode === 27) {
-        startStopGame(false);
-        setMenuVisible(true); // Show menu when Escape key is pressed
-        return;
+        return startState;
       }
 
       setState((prevState) => {

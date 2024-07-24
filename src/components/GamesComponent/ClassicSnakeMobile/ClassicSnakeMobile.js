@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, act } from "react";
 import Controls from "../Controls/Controls";
 import "./classicsnakemobile.scss";
 
@@ -12,7 +12,7 @@ const startState = {
     [70, 70],
     [80, 70],
   ], // Start with 4 block snake
-  food: [200, 70],
+  food: [150, 70],
   score: 0,
   high_score: localStorage.getItem("high_score") || 0,
 };
@@ -31,37 +31,37 @@ const ClassicSnakeMobile = () => {
       let target = prevState.food;
       switch (direction) {
         case "up":
-          newHead = [snakeHead[0], snakeHead[1] - 10];
+          newHead = [snakeHead[0], snakeHead[1] - 5];
           break;
         case "right":
-          newHead = [snakeHead[0] + 10, snakeHead[1]];
+          newHead = [snakeHead[0] + 5, snakeHead[1]];
           break;
         case "down":
-          newHead = [snakeHead[0], snakeHead[1] + 10];
+          newHead = [snakeHead[0], snakeHead[1] + 5];
           break;
         case "left":
-          newHead = [snakeHead[0] - 10, snakeHead[1]];
+          newHead = [snakeHead[0] - 5, snakeHead[1]];
           break;
         default:
           newHead = [snakeHead[0], snakeHead[1]];
       }
       // Check if the new head collides with the snake's body
       for (let i = 0; i < currentSnake.length - 1; i++) {
-        if (currentSnake[i][0] == newHead[0] && currentSnake[i][1] == newHead[1]) {
+        if (currentSnake[i][0] === newHead[0] && currentSnake[i][1] === newHead[1]) {
           startStopGame(true); // Game over, reset
           return startState;
         }
       }
       // Teleport through walls
-      if (newHead[0] >= 315) newHead[0] = 0;
-      if (newHead[0] < 0) newHead[0] = 315;
-      if (newHead[1] >= 315) newHead[1] = 0;
-      if (newHead[1] < 0) newHead[1] = 315;
+      if (newHead[0] >= 310) newHead[0] = 0;
+      if (newHead[0] < 0) newHead[0] = 310;
+      if (newHead[1] >= 310) newHead[1] = 0;
+      if (newHead[1] < 0) newHead[1] = 310;
       currentSnake.push(newHead);
       // Check if food is eaten
-      if (newHead[0] == target[0] && newHead[1] == target[1]) {
-        let posX = Math.floor(Math.random() * 50) * 10;
-        let posY = Math.floor(Math.random() * 50) * 10;
+      if (newHead[0] === target[0] && newHead[1] === target[1]) {
+        let posX = Math.floor(Math.random() * 31) * 10;
+        let posY = Math.floor(Math.random() * 31) * 10;
         return {
           ...prevState,
           snake: currentSnake,
@@ -96,31 +96,30 @@ const ClassicSnakeMobile = () => {
 
   const handleKeys = useCallback(
     (event) => {
-      if (event.keyCode == 13 && !state.active) {
+      console.log(event);
+      if (event.keyCode === 13 && !state.active) {
         startStopGame(true);
         return;
       }
 
-      if (event.keyCode == 13 && state.active) return;
+      if (event.keyCode === 13 && state.active) return;
 
-      if (event.keyCode == 27) {
-        startStopGame(false);
-        setMenuVisible(true); // Show menu when Escape key is pressed
-        return;
+      if (event.keyCode === 27) {
+        return startState;
       }
 
       setState((prevState) => {
         let currentD = prevState.direction;
-        if (event.keyCode == 65 && currentD !== "right") {
+        if (event.keyCode === 65 && currentD !== "right") {
           return { ...prevState, direction: "left" };
         }
-        if (event.keyCode == 68 && currentD !== "left") {
+        if (event.keyCode === 68 && currentD !== "left") {
           return { ...prevState, direction: "right" };
         }
-        if (event.keyCode == 87 && currentD !== "down") {
+        if (event.keyCode === 87 && currentD !== "down") {
           return { ...prevState, direction: "up" };
         }
-        if (event.keyCode == 83 && currentD !== "up") {
+        if (event.keyCode === 83 && currentD !== "up") {
           return { ...prevState, direction: "down" };
         }
         return prevState;
@@ -137,7 +136,7 @@ const ClassicSnakeMobile = () => {
   
   useEffect(() => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode == 27) {
+      if (event.keyCode === 27) {
         handleEscape();
       }
     });
@@ -151,7 +150,7 @@ const ClassicSnakeMobile = () => {
   }, [handleKeys]);
 
   useEffect(() => {
-    if (state.score % 3 == 0 && state.score > 0) {
+    if (state.score % 3 === 0 && state.score > 0) {
       speedUp();
     }
   }, [state.score]);
