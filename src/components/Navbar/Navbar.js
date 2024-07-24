@@ -45,7 +45,7 @@ function Navbar() {
               </a>
             </li>
             <li className="list" data-color="#05c46b">
-              <a href="#">
+              <a href="/about-us">
                 <span className="icon">
                   <i className="far fa-info"></i>
                 </span>

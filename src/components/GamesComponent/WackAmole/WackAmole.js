@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./wackamole.scss";
-import "../../titleSection/titleSection.scss";
+
 import ScoreSection from "../ScoreSection/ScoreSection";
 import GameNavSec from "../../GameNavSec/GameNavSec";
+import TitleSection from "../../titleSection/TitleSection";
+
+import "./wackamole.scss";
+import "../../titleSection/titleSection.scss";
 
 const difficultyLevels = {
   easy: { min: 700, max: 1000 },
@@ -90,9 +93,7 @@ const Wackamole = () => {
   return (
     <div className="gameDiv">
       <GameNavSec />
-      <div className="title-section" id="titleSection">
-        <h1 className="title">Whack-A-Mole!</h1>
-      </div>
+      <TitleSection title = "Whack-A-Mole!" />
       <div className="scoreSection">
         <span className="score">Hits</span>
         <span className="hits">{hits}</span>

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import ClassicSnakeDesktop from "../ClassicSnakeDesktop/ClassicSnakeDesktop";
 import ClassicSnakeMobile from "../ClassicSnakeMobile/ClassicSnakeMobile";
+import TitleSection from "../../titleSection/TitleSection";
 import GameNavSec from "../../GameNavSec/GameNavSec";
-import "../../titleSection/titleSection.scss";
 import "./classicsnake.scss";
 
 function ClassicSnake() {
@@ -20,9 +20,7 @@ function ClassicSnake() {
     <>
       <div className="gameDiv">
         <GameNavSec />
-        <div className="title-section" id="titleSection">
-          <h1 className="title">Classic Snake 🐍</h1>
-        </div>
+        <TitleSection title="Classic Snake 🐍" />
         <div className="switches-container">
           <input
             type="radio"
