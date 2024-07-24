@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ClassicSnakeDesktop from "../ClassicSnakeDesktop/ClassicSnakeDesktop";
 import ClassicSnakeMobile from "../ClassicSnakeMobile/ClassicSnakeMobile";
 import GameNavSec from "../../GameNavSec/GameNavSec";
@@ -7,6 +7,14 @@ import "./classicsnake.scss";
 
 function ClassicSnake() {
   const [checkedValue, setCheckedValue] = useState("Desktop");
+
+  useEffect(() => {
+    if (window.innerWidth < 720) {
+      setCheckedValue("Mobile")
+    } else {
+      setCheckedValue("Desktop")
+    }
+  },[window.innerWidth]);
 
   return (
     <>
@@ -50,7 +58,7 @@ function ClassicSnake() {
           </div>
         </div>
         <div className="gameSwtichComp">
-          {checkedValue == "Desktop" ? (
+          {checkedValue == "Desktop"? (
             <ClassicSnakeDesktop />
           ) : (
             <ClassicSnakeMobile />
