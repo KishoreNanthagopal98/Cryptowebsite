@@ -150,3 +150,9 @@
 .navigation ul li:nth-child(5).active ~ .indicator::before {
   background-color: #ffa801;
 }
+
+@media (max-width: 767px) {
+  .navigation ul li:hover a .titleNav {
+    display: none;
+  }
+}
