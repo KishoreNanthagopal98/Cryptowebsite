@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
+
 import "./navbar.scss";
 
 function Navbar() {
+  const location = useLocation();
+  const urlPath = location.pathname;
+  const path = {
+    home: urlPath === "/" ? "#" : "/",
+    games: urlPath === "/" ? "#gameSection" : "/#gameSection",
+  };
   useEffect(() => {
     let list = document.querySelectorAll(".list");
 
     list.forEach((element, index) => {
-      element.addEventListener("click", function(event) {
-        list.forEach(item => item.className = "list");
+      element.addEventListener("click", function (event) {
+        list.forEach((item) => (item.className = "list"));
         element.className = "list active";
-        
+
         let bg = document.querySelector("body");
         let color = event.currentTarget.getAttribute("data-color");
         bg.style.backgroundColor = color;
@@ -18,18 +26,19 @@ function Navbar() {
 
     // Clean up event listeners on component unmount
     return () => {
-      list.forEach(element => {
+      list.forEach((element) => {
         element.replaceWith(element.cloneNode(true));
       });
     };
   }, []);
-  return ( 
-    <> 
-      <div className="navbarPar"> 
+
+  return (
+    <>
+      <div className="navbarPar">
         <div className="navigation">
           <ul>
             <li className="list active" data-color="#dc143c">
-              <a href="#titleSection">
+              <a href={path.home}>
                 <span className="icon">
                   <i className="far fa-home"></i>
                 </span>
@@ -37,7 +46,7 @@ function Navbar() {
               </a>
             </li>
             <li className="list" data-color="#3c40c6">
-              <a href="#gameSection">
+              <a href={path.games}>
                 <span className="icon">
                   <i className="far fa-gamepad"></i>
                 </span>
@@ -71,7 +80,7 @@ function Navbar() {
             <div className="indicator"></div>
           </ul>
         </div>
-      </div> 
+      </div>
     </>
   );
 }
