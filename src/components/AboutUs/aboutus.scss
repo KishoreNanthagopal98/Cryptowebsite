@@ -1,0 +1,87 @@
+.about_us {
+    margin: 50px 0px 100px 0px;
+    z-index: 9999;
+    display: flex;
+    position: relative;
+    background-image: linear-gradient( to bottom, #fcd7ab, #ffc4b0, #ffb5c7, #f3b0e6, #bdb4ff );
+}
+
+@media (max-width: 576px){
+    .titleSection {
+        font-size: 1.5em !important;
+    }
+}
+
+
+@media only screen and (min-width: 1025px){
+    .about_us  {
+        width: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.details_section {
+    display: flex;
+    text-align: center;
+    background: url(../../assets/ll-removebg-preview.png);
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+.aboutsite {
+    display: flex;
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paratwo {
+    width: 85%;
+    padding: 50px 0;
+    text-transform: capitalize;
+    text-shadow: -1px 1px 8px #f8f8f8;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 39px;
+}
+
+.paraone  {
+    width: 85%;
+    padding: 50px 0;
+    text-transform: capitalize;
+    text-shadow: -1px 1px 8px #f8f8f8;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 39px;
+}
+
+@media (max-width: 768px) {
+    .paratwo {
+        width: 85%;
+        padding: 50px 0;
+        text-transform: capitalize;
+        text-shadow: -1px 1px 8px #f8f8f8;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 30px;
+    }
+    
+    .paraone  {
+        width: 85%;
+        padding: 50px 0;
+        text-transform: capitalize;
+        text-shadow: -1px 1px 8px #f8f8f8;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 30px;
+    }
+}
+.reachMenuSection {
+    display: block;
+    width: 100%;
+    height:100px;
+}

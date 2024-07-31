@@ -1,12 +1,12 @@
 import CloudBackground from "../../components/CloudBackground/CloudBackground";
 import Navbar from "../../components/Navbar/Navbar";
-import TitleSection from "../../components/titleSection/TitleSection";
+import Aboutus from "../../components/AboutUs/Aboutus";
 
 function AboutSection () {
 	return (
 		<>
 			<CloudBackground />
-			<TitleSection title = "About Us"/>
+			<Aboutus />
 			<Navbar />
 		</>
 	)
