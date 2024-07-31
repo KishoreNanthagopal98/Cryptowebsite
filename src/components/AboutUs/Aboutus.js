@@ -1,5 +1,9 @@
 import "./aboutus.scss";
 import TitleSection from "../../components/titleSection/TitleSection";
+import githubImage from "../../assets/github.png";
+import linkedinImg from "../../assets/linkedin.png";
+import gmailImg from "../../assets/gmail.png";
+import instaImg from "../../assets/instagram.png";
 
 function Aboutus() {
   return (
@@ -27,8 +31,27 @@ function Aboutus() {
               games! <br /> <br /> Reach me @
             </div>
             <div className="reachMenuSection">
-              <div className="icons linkedin">
-                <i class="fa-linkedin-in"></i>
+              <div className="menuListSection">
+                <a href="https://github.com/KishoreNanthagopal98">
+                  <span className="reachIcon">
+                    <img src={githubImage} alt="Github"></img>
+                  </span>
+                </a>
+                <a href="https://www.linkedin.com/in/kishore-n-132a80179">
+                  <span className="reachIcon">
+                    <img src={linkedinImg} alt="Linkedin"></img>
+                  </span>
+                </a>
+                <a href="mailto:kishorenpn6@gmail.com">
+                  <span className="reachIcon">
+                    <img src={gmailImg} alt="mail"></img>
+                  </span>
+                </a>
+                <a href="https://www.instagram.com/kishore_np/">
+                  <span className="reachIcon">
+                    <img src={instaImg} alt="Instagram"></img>
+                  </span>
+                </a>
               </div>
             </div>
           </div>

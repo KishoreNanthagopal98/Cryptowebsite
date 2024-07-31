@@ -18,7 +18,7 @@
   position: relative;
   bottom: 0;
   z-index: 2;
-  width: 350px;
+  width: 280px;
   height: 70px;
   border-radius: 40px;
   margin-bottom:2%;
@@ -147,9 +147,9 @@
 .navigation ul li:nth-child(4).active ~ .indicator::before {
   background-color: #0fbcf9;
 }
-.navigation ul li:nth-child(5).active ~ .indicator::before {
-  background-color: #ffa801;
-}
+// .navigation ul li:nth-child(5).active ~ .indicator::before {
+//   background-color: #ffa801;
+// }
 
 @media (max-width: 767px) {
   .navigation ul li:hover a .titleNav {

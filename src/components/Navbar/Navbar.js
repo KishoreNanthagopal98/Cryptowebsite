@@ -9,6 +9,7 @@ function Navbar() {
   const path = {
     home: urlPath === "/" ? "#" : "/",
     games: urlPath === "/" ? "#gameSection" : "/#gameSection",
+    aboutUs: urlPath === "/about-us" ? "#" : "/about-us"
   };
   useEffect(() => {
     let list = document.querySelectorAll(".list");
@@ -54,7 +55,7 @@ function Navbar() {
               </a>
             </li>
             <li className="list" data-color="#05c46b">
-              <a href="/about-us">
+              <a href={path.aboutUs}>
                 <span className="icon">
                   <i className="far fa-info"></i>
                 </span>
@@ -69,14 +70,14 @@ function Navbar() {
                 <span className="titleNav">Help</span>
               </a>
             </li>
-            <li className="list" data-color="#ffa801">
+            {/* <li className="list" data-color="#ffa801">
               <a href="#">
                 <span className="icon">
                   <i className="far fa-user"></i>
                 </span>
                 <span className="titleNav">Profile</span>
               </a>
-            </li>
+            </li> */}
             <div className="indicator"></div>
           </ul>
         </div>
