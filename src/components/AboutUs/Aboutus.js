@@ -4,6 +4,7 @@ import githubImage from "../../assets/github.png";
 import linkedinImg from "../../assets/linkedin.png";
 import gmailImg from "../../assets/gmail.png";
 import instaImg from "../../assets/instagram.png";
+import websiteImg from "../../assets/web.png";
 
 function Aboutus() {
   return (
@@ -32,12 +33,12 @@ function Aboutus() {
             </div>
             <div className="reachMenuSection">
               <div className="menuListSection">
-                <a href="https://github.com/KishoreNanthagopal98">
+                <a href="https://github.com/KishoreNanthagopal98" target="blank">
                   <span className="reachIcon">
                     <img src={githubImage} alt="Github"></img>
                   </span>
                 </a>
-                <a href="https://www.linkedin.com/in/kishore-n-132a80179">
+                <a href="https://www.linkedin.com/in/kishore-n-132a80179" target="blank">
                   <span className="reachIcon">
                     <img src={linkedinImg} alt="Linkedin"></img>
                   </span>
@@ -47,9 +48,14 @@ function Aboutus() {
                     <img src={gmailImg} alt="mail"></img>
                   </span>
                 </a>
-                <a href="https://www.instagram.com/kishore_np/">
+                <a href="https://www.instagram.com/kishore_np/" target="blank">
                   <span className="reachIcon">
                     <img src={instaImg} alt="Instagram"></img>
+                  </span>
+                </a>
+                <a href="https://kishoren.vercel.app/" target="blank">
+                  <span className="reachIcon">
+                    <img src={websiteImg} alt="Portfolio"></img>
                   </span>
                 </a>
               </div>
