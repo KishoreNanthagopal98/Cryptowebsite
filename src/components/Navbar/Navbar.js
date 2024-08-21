@@ -9,7 +9,8 @@ function Navbar() {
   const path = {
     home: urlPath === "/" ? "#" : "/",
     games: urlPath === "/" ? "#gameSection" : "/#gameSection",
-    aboutUs: urlPath === "/about-us" ? "#" : "/about-us"
+    aboutUs: urlPath === "/about-us" ? "#" : "/about-us",
+    help: urlPath === "/help" ? "#" : "/help"
   };
   useEffect(() => {
     let list = document.querySelectorAll(".list");
@@ -63,7 +64,7 @@ function Navbar() {
               </a>
             </li>
             <li className="list" data-color="#0fbcf9">
-              <a href="#">
+              <a href={path.help}>
                 <span className="icon">
                   <i className="far fa-question-circle"></i>
                 </span>
