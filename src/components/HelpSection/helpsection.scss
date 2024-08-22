@@ -112,3 +112,81 @@ button:hover {
     margin-top: -7px;
     color: white;
 }
+
+.formSuccess {
+    margin: 30px 0px;
+    display: block;
+}
+
+.formFailure {
+    display: none;
+}
+
+.successSvg {
+    height: 150px;
+}
+
+.messageCont {
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.messageLine {
+    width: 70%;
+    margin:auto;
+}
+
+.messageLine .submitLineOne{
+    color: white;
+    font-size: 1.6rem;
+    font-family: "Press Start 2P", cursive;
+    line-height: 40px;
+}
+
+.messageLine .submitLineTwo{
+    color: white;
+    line-height: 40px;
+    font-size: 1.2rem;
+    font-family: "Press Start 2P", cursive;
+}
+
+@media (max-width:767px) {
+    .formSt{
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .fields label {
+        font-size: 1rem;
+    }
+
+    .fields input{
+        padding: 0.5rem 0.55rem;
+    }
+
+    .titleDiv {
+        padding-top: 20px;
+    }
+
+    .messageLine .submitLineOne{
+        color: white;
+        font-size: 1rem;
+        font-family: "Press Start 2P", cursive;
+        line-height: 40px;
+    }
+    
+    .messageLine .submitLineTwo{
+        color: white;
+        line-height: 40px;
+        font-size: 0.9rem;
+        font-family: "Press Start 2P", cursive;
+    }
+
+    .successSvg {
+        height: 100px;
+    }
+
+    .messageCont{
+        padding: 40px 0px;
+    }
+}
