@@ -40,9 +40,9 @@ function HelpSection() {
 
   function onSubmit(data) {
     var bodyFormData = new FormData();
-    bodyFormData.append("entry.752584244", "90sGameMania -  " + data.name);
-    bodyFormData.append("entry.1585333184", "90sGameMania -  " + data.mobileNumber);
-    bodyFormData.append("entry.539832214", "90sGameMania -  " + data.comment);
+    bodyFormData.append("entry.752584244", "90sGameVault -  " + data.name);
+    bodyFormData.append("entry.1585333184", "90sGameVault -  " + data.mobileNumber);
+    bodyFormData.append("entry.539832214", "90sGameVault -  " + data.comment);
     axios
       .post(
         "https://docs.google.com/forms/u/1/d/e/1FAIpQLSe3vgR2rNrzQbLHZGjAa8kDjCra3diNh6Bl4xa7g0xQVuOz8Q/formResponse",
